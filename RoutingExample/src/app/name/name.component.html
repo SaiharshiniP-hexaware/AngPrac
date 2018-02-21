@@ -1,0 +1,23 @@
+<p>
+  name works!
+</p>
+FirstName:
+<input type="text"
+[(ngModel)]= "model.firstName"
+name="firstName"
+placeholder="Please Enter FirstName"/>
+<br/><br/>
+LastName:
+<input type="text"
+[(ngModel)]= "model.lastName"
+name="lastName"
+placeholder="Please Enter LastName" (blur)="full()"/>
+fullname:
+<input type="text"
+[(ngModel)]="model.fullName"
+placeholder="fullname"
+name="fullName" />
+
+
+
+
