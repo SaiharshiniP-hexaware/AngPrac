@@ -1,0 +1,20 @@
+<p>
+  forms-demo works!
+</p>
+<form>
+  Name :
+  <input type="text" name="sname"
+  [(ngModel)]="sname"/> <br/>
+  Date of Birth :
+  <input type="date" name="dt"
+  [(ngModel)]="dob"/> <br/>
+  Month:
+  <input type="month" name="month"
+  [(ngModel)]="month"/> <br/>
+  Email:
+  <input type="email" name="email"
+  [(ngModel)]="email"/> <br/>
+</form>
+Name is : {{sname}} <br/>
+Date of Birth {{dob}} <br/>
+Email:{{email}}

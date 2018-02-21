@@ -1,0 +1,18 @@
+<p>
+  name-drop-down works!
+</p>
+Select Country :
+<select [(ngModel)] = "cname">
+  <option *ngFor="let c of countries"
+ value = "{{c.name}}">
+ {{c.name}}
+  </option>
+
+</select>
+<br/>
+Selected Country : {{cname}}
+<div *ngIf="cname=='USA'">
+  He is from USA .... </div>
+<div *ngIf="cname== 'Australia'">
+  He is from Australia ...
+</div>

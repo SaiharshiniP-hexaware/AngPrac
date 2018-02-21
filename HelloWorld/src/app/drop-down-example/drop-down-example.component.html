@@ -1,0 +1,12 @@
+<p>
+  drop-down-example works!
+</p>
+Select Name :
+<select [(ngModel)] = "sname">
+  <option value = "Harshini"> Harshini </option>
+  <option value = "Malathi" > Malathi </option>
+  <option value = "Jagannadh" > Jagannadh </option>
+</select> 
+Selected value is : {{sname}} 
+<div *ngIf="sname=='Harshini'">
+    It's her from ftp18 .... </div>
