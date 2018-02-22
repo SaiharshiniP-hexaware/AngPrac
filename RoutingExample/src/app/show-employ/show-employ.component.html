@@ -1,0 +1,19 @@
+<p>
+  show-employ works!
+</p>
+
+<form (ngSubmit)="show()">
+  Employ No : 
+  <input type="text" name="empId"   [(ngModel)]= "model.empId" />  
+  <button>Show</button>
+</form>
+
+
+<h4>Employee ID : {{ (employee  | async)?.empId }}</h4>
+<h4>Employee Name : {{ (employee  | async)?.empName }}</h4>
+<h4>Employee Phone : {{ (employee  | async)?.empPhone }}</h4>
+<h4>Employee Email : {{ (employee  | async)?.empEmail }}</h4>
+<h4>Employee DOJ : {{ (employee  | async)?.empDoj }}</h4>
+<h4>Employee mgrId : {{ (employee  | async)?.mgrId }}</h4>
+<h4>Employee empDeptName : {{ (employee  | async)?.empDeptName }}</h4>
+<h4>Employee empLevBalance : {{ (employee  | async)?.empLevBalance }}</h4>

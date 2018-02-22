@@ -8,7 +8,9 @@ import {Login} from '../Login';
 export class LoginComponent implements OnInit {
   model= new Login();
   message :string;
-  constructor() { }
+  constructor() {
+    this.model.userName= localStorage.getItem("id");
+   }
   show() {
     var user=this.model.userName;
   

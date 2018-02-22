@@ -1,0 +1,29 @@
+<p>
+  employee works!
+</p>
+<table border="3">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>empphone</th>
+    <th>empmail</th>
+    <th>empdoj</th>
+    <th>empmgrid</th>
+    <th>empdeptname</th>
+    <th>emplevbalance</th>
+    <th>login</th>
+  </tr>
+  <tr *ngFor="let user of emp | async">
+    <td>{{user.empId}}</td>
+    <td>{{user.empName}}</td>
+    <td>{{user.empPhone}}</td>
+    <td>{{user.empEmail}}</td>
+    <td>{{user.empDoj}}</td>
+    <td>{{user.mgrId}}</td>
+    <td>{{user.empDeptName}}</td>
+    <td>{{user.empLevBalance}}</td>
+    <button (click) ="login(user.empId)">login</button>
+  </tr>
+  
+  </table>
+  

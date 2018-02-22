@@ -10,7 +10,9 @@ export class LoginScreenComponent implements OnInit {
 
   model= new LoginScreen();
   message :string;
-  constructor(private _router:Router) { }
+  constructor(private _router:Router) {
+    this.model.userName=localStorage.getItem("id");
+   }
   show() {
     var user=this.model.userName;
   

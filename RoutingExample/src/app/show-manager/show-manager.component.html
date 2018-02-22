@@ -1,0 +1,33 @@
+<p>
+  show-manager works!
+</p>
+<form (ngSubmit)="show()">
+    Employ No : 
+    <input type="text" name="mgrId"  [(ngModel)]= "model.mgrId" />  
+    <button>Show</button>
+  </form>
+  <table border="3">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>empphone</th>
+        <th>empmail</th>
+        <th>empdoj</th>
+        <th>empmgrid</th>
+        <th>empdeptname</th>
+        <th>emplevbalance</th>
+      </tr>
+      <tr *ngFor="let user of employee | async">
+        <td>{{user.empId}}</td>
+        <td>{{user.empName}}</td>
+        <td>{{user.empPhone}}</td>
+        <td>{{user.empEmail}}</td>
+        <td>{{user.empDoj}}</td>
+        <td>{{user.mgrId}}</td>
+        <td>{{user.empDeptName}}</td>
+        <td>{{user.empLevBalance}}</td>
+      </tr>
+      
+      </table>
+      
+  
