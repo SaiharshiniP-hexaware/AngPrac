@@ -1,12 +1,3 @@
-<p>
-  show-employ works!
-</p>
-
-<form (ngSubmit)="show()">
-  Employ No : 
-  <input type="text" name="empId"   [(ngModel)]= "model.empId" />  
-  <button>Show</button>
-</form>
 
 
 <h4>Employee ID : {{ (employee  | async)?.empId }}</h4>

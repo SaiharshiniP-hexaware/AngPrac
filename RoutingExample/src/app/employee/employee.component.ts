@@ -15,10 +15,11 @@ export class EmployeeComponent implements OnInit {
   
   }
   numb : number;
-  login (numb) {
+  numb1 : number;
+  login (numb,numb1) {
 localStorage.setItem("id",numb);
+localStorage.setItem("mid",numb1);
 this._router.navigate(['/Login']);
-
   }
   ngOnInit() {
   }

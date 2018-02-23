@@ -8,13 +8,11 @@ import {Observable} from 'rxjs/Rx';
   styleUrls: ['./show-employ.component.css']
 })
 export class ShowEmployComponent implements OnInit {
-
-  constructor(private _serv : EmployeeService) { }
-
-  model=new Employee();
+  eid:number;
   employee : Observable<Employee>;
-  show() {
-    this.employee=this._serv.getEmploy(this.model.empId);
+  constructor(private _serv : EmployeeService) { 
+    this.eid = parseInt(localStorage.getItem("id"));
+    this.employee=this._serv.getEmploy(this.eid);
   }
   ngOnInit() {
   }

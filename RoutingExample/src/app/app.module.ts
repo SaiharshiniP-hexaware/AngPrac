@@ -17,6 +17,7 @@ import { UserShowComponent } from './user-show/user-show.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ShowEmployComponent } from './show-employ/show-employ.component';
 import { ShowManagerComponent } from './show-manager/show-manager.component';
+import { LeavehistoryComponent } from './leavehistory/leavehistory.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { ShowManagerComponent } from './show-manager/show-manager.component';
     UserShowComponent,
     EmployeeComponent,
     ShowEmployComponent,
-    ShowManagerComponent
+    ShowManagerComponent,
+    LeavehistoryComponent
   ],
   imports: [
     BrowserModule,FormsModule,HttpModule,
@@ -40,12 +42,13 @@ import { ShowManagerComponent } from './show-manager/show-manager.component';
       {path:'menu',component:MenuComponent},
       {path:'ShowEmp',component:ShowEmployComponent},
       {path:'users',component:UserShowComponent},
-      {path:'Employee',component:EmployeeComponent},
+      {path:'',component:EmployeeComponent},
       {path:'Login',component:LoginScreenComponent},
-      {path:'',component:ShowManagerComponent}
+      {path:'showm',component:ShowManagerComponent}
+      {path:''}
     ])
   ],
-  providers: [DemoService,UserService,EmployeeService],
+  providers: [DemoService,UserService,EmployeeService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

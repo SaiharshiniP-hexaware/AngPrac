@@ -10,13 +10,12 @@ import { Observable } from "rxjs/Rx";
 })
 export class ShowManagerComponent implements OnInit {
 
-  constructor(private _serv : EmployeeService) { }
-  
-    model=new Employee();
-    employee : Observable<Employee[]>;
-    show() {
-      this.employee=this._serv.getManager(this.model.mgrId);
-    }
+  mid:number;
+  employee : Observable<Employee>;
+  constructor(private _serv : EmployeeService) { 
+    this.mid = parseInt(localStorage.getItem("mid"));
+    this.employee=this._serv.getEmploy(this.mid);
+  }
 
   ngOnInit() {
   }

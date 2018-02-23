@@ -14,16 +14,9 @@ export class LoginScreenComponent implements OnInit {
     this.model.userName=localStorage.getItem("id");
    }
   show() {
-    var user=this.model.userName;
-  
-    var pwd=this.model.passWord;
-  if(user=="hexaware" && pwd=="hexaware"){
-// this.message= "correct credentials";
- this._router.navigate(['/menu']);
-  }
-  else {
-    this.message="Invalid credentials";
-  }
+ 
+ this._router.navigate(['/showm']);
+ this._router.navigate(['/leavehistory']);
   }
   ngOnInit(){
   }
